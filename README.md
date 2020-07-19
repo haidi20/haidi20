@@ -10,4 +10,6 @@
   </samp>
 </p>
 
-<!-- ### Programming Languages  :rocket: -->
+### Programming Languages  :rocket:
+|<img src="https://github.com/haidi20/haidi20/blob/master/images/laravel-logo.png" width=60> | <img src="https://github.com/haidi20/haidi20/blob/master/images/reactjs.png"" width=60> | <img src="https://github.com/haidi20/haidi20/blob/master/images/flutter.png"" width=60> |
+|:---:|:---:|:---:|
