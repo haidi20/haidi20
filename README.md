@@ -13,3 +13,4 @@
 |:---:|:---:|:---:|
 
 ## My Github Performance
+![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=haidi20&theme=default&show_icons=true)
