@@ -13,5 +13,3 @@
 |:---:|:---:|:---:|
 
 ## My Github Performance
-
-![github stats](https://github-readme-stats.vercel.app/api?username=haidi20&show_icons=true)
