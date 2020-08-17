@@ -15,7 +15,7 @@
 ## My Github Performance
 ![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=haidi20&theme=default&show_icons=true)
 
-## my medium
+## My medium
 <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@haidinurhadinata_22/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@haidinurhadinata_22/0" alt="Recent Article 0"> 
 
 
