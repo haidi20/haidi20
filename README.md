@@ -9,7 +9,7 @@
 </p>
 
 ### Tools used  :rocket:
-|<img src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/laravel-logo.png" width=150> | <img src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/reactjs.png" width=150> | <img src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/flutter.png" width=150> |
+|<img src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/laravel-logo.png" width=150> | <img src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/vue.png" width=150> | <img src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/flutter.png" width=150> |
 |:---:|:---:|:---:|
 
 ## My Github Performance
