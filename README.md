@@ -9,9 +9,9 @@
 </p>
 
 ### Tools used  :rocket:
-<img width="21px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/laravel-logo.png" > 
-<img width="21px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/vue.jpg" > 
-<img width="21px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/flutter.png"> 
+<img align="left" width="150px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/laravel-logo.png" > 
+<img align="left" width="150px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/vue.jpg" > 
+<img align="left" width="150px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/flutter.png"> 
 
 ## My Github Performance
 ![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=haidi20&theme=default&show_icons=true)
