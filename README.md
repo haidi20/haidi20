@@ -1,4 +1,4 @@
-## Hai Devs :wave:, 
+## Hai Devs :wave: 
 
 <!--<p align="center">
   <img src="https://raw.githubusercontent.com/coderjojo/coderjojo/master/img/github.gif" width=100>
@@ -11,7 +11,8 @@
 ### Tools used  :rocket:
 <img align="left" width="150px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/laravel-logo.png" > 
 <img align="left" width="150px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/vue.jpg" > 
-<img align="left" width="150px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/flutter.png"> 
+<img align="left" width="150px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/flutter.png"> <br /> <br /> <br /> <br /> <br /> <br />
+
 
 ## My Github Performance
 ![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=haidi20&theme=default&show_icons=true)
