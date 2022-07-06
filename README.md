@@ -5,10 +5,10 @@
   <br><br> -->
   <samp>
     I graduated from the Politeknik Negeri Samarinda with a major in Technology Information in Samarinda, East Kalimantan, Indonesia. 
-Currently works as a Web Developer, and I'm an expert on Laravel and other technologies such as:
-Front-End | Reactjs, Redux, Nextjs, TypeScript, Tailwind 
-Back-end | Mysql, SQL Server, and Django
-DevOps | Docker, Nginx, and Jenkins
+Currently works as a Web Developer, and I'm an expert on Laravel and other technologies such as: <br>
+Front-End | Reactjs, Redux, Nextjs, TypeScript, Tailwind <br>
+Back-end | Mysql, SQL Server, and Django <br>
+DevOps | Docker, Nginx, and Jenkins <br>
 Mobile | Flutter & java
   </samp>
 </p>
