@@ -4,13 +4,18 @@
   <img src="https://raw.githubusercontent.com/coderjojo/coderjojo/master/img/github.gif" width=100>
   <br><br> -->
   <samp>
-    I am Haidi, currently working one of mining company at Bengalon sub-district KUTAI TIMUR districts as a Software Engineering. I am interested in working on the backend using Laravel, frontend using Reactjs, and mobile using Flutter. I've ever competed in hackathon Samarinda city and have participated in training data analytics on digital talent scholarship in 2019. I love so much learning about IT as especially programming. My big dream I will be working from home and have lots of time with my family. Most importantly, I will have lots of time to study new things.
+    I graduated from the Politeknik Negeri Samarinda with a major in Technology Information in Samarinda, East Kalimantan, Indonesia. 
+Currently works as a Web Developer, and I'm an expert on Laravel and other technologies such as:
+Front-End | Reactjs, Redux, Nextjs, TypeScript, Tailwind 
+Back-end | Mysql, SQL Server, and Django
+DevOps | Docker, Nginx, and Jenkins
+Mobile | Flutter & java
   </samp>
 </p>
 
 ### Tools used  :rocket:
 <img align="left" width="150px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/laravel-logo.png" > 
-<img align="left" width="150px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/vue.jpg" > 
+<img align="left" width="150px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/reactjs.png" > 
 <img align="left" width="150px" src="https://raw.githubusercontent.com/haidi20/haidi20/master/images/flutter.png"> <br /> <br /> <br /> <br /> <br /> <br /> <br />
 
 
