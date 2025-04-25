@@ -1,10 +1,6 @@
 import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue2';
+import vue from '@vitejs/plugin-vue2';  // Menggunakan plugin untuk Vue 2
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  server: {
-    open: true, // otomatis membuka browser setelah dijalankan
-  },
 });
