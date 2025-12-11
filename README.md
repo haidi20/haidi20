@@ -6,7 +6,7 @@
   <samp>
     I graduated from the Politeknik Negeri Samarinda with a major in Technology Information in Samarinda, East Kalimantan, Indonesia. 
 Currently works as a Web Developer, and I'm an expert on Laravel and other technologies such as: <br>
-Front-End | Reactjs, Redux, Nextjs, TypeScript, Tailwind <br>
+Front-End | Vue, Pinia, Vuex, TypeScript, Tailwind, Bootstrap 5 <br>
 Back-end | Mysql, SQL Server, and Django <br>
 DevOps | Docker, Nginx, and Jenkins <br>
 Mobile | Flutter & java
