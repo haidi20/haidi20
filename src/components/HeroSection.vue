@@ -32,7 +32,7 @@ const profileStore = useProfileStore();
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-top: clamp(88px, 10vh, 160px);
+  padding-top: clamp(64px, 8vh, 120px);
 }
 
 .corners {
@@ -71,7 +71,7 @@ const profileStore = useProfileStore();
 h1 {
   display: flex;
   flex-direction: column;
-  font-size: clamp(64px, 12vw, 170px);
+  font-size: clamp(56px, 10.5vw, 150px);
   font-weight: 800;
   letter-spacing: -0.05em;
   line-height: 0.88;
@@ -89,7 +89,7 @@ h1 {
 
 .baseline {
   margin-top: auto;
-  padding-bottom: 4vh;
+  padding-bottom: 32px;
   display: flex;
   justify-content: flex-end;
 }
@@ -102,7 +102,7 @@ h1 {
 }
 
 .support {
-  max-width: 360px;
+  max-width: 420px;
   font-size: var(--step-body);
   line-height: 1.5;
   color: var(--ink-soft);
