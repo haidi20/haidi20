@@ -1,9 +1,8 @@
 <template>
   <section id="pengalaman" class="experience" data-reveal>
     <p class="label"><span class="num" aria-hidden="true">03</span>Pengalaman</p>
-    <ol class="list">
-      <li v-for="(exp, i) in profileStore.experiences" :key="exp.company" class="row">
-        <span class="index" aria-hidden="true">{{ String(i + 1).padStart(2, '0') }}</span>
+    <ul class="list">
+      <li v-for="exp in profileStore.experiences" :key="exp.company" class="row">
         <div class="body">
           <h3>{{ exp.role }}</h3>
           <p class="meta">{{ exp.company }} — {{ exp.location }}</p>
@@ -13,7 +12,7 @@
         </div>
         <p class="period">{{ exp.period }}</p>
       </li>
-    </ol>
+    </ul>
   </section>
 </template>
 
@@ -53,7 +52,7 @@ const profileStore = useProfileStore();
 
 .row {
   display: grid;
-  grid-template-columns: 56px 1fr auto;
+  grid-template-columns: 1fr auto;
   gap: clamp(16px, 3vw, 40px);
   padding: clamp(28px, 4vw, 44px) 0;
   border-top: 1px solid var(--line);
@@ -62,14 +61,6 @@ const profileStore = useProfileStore();
 
 .row:hover {
   background: linear-gradient(to right, var(--accent-wash), transparent 65%);
-}
-
-.index {
-  font-family: var(--mono);
-  font-size: var(--step-small);
-  color: var(--accent);
-  padding-top: 8px;
-  font-variant-numeric: tabular-nums;
 }
 
 .body h3 {
