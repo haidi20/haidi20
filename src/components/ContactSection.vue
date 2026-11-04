@@ -42,7 +42,7 @@ const year = new Date().getFullYear();
   align-items: baseline;
   gap: 24px;
   padding: 22px 0;
-  border-top: 1px solid rgba(148, 163, 184, 0.15);
+  border-top: 1px solid rgba(2, 132, 199, 0.18);
   text-decoration: none;
   transition: padding-left 0.2s ease;
 }
@@ -71,7 +71,7 @@ const year = new Date().getFullYear();
 
 .footer {
   margin-top: 72px;
-  color: #475569;
+  color: #94a3b8;
   font-size: var(--step-small);
 }
 

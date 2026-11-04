@@ -10,14 +10,14 @@
 
 <style>
 html {
-  color-scheme: dark;
+  color-scheme: light;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  background-color: #0f172a;
-  color: #e2e8f0;
+  background-color: #ffffff;
+  color: #1e293b;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -26,13 +26,16 @@ body {
   --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
   --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
   --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
-  --ink-pale: #e2e8f0;
-  --ink-soft: #94a3b8;
-  --accent: #7dd3fc;
+  --ink-pale: #1e293b;
+  --ink-soft: #64748b;
+  --accent: #0ea5e9;
+  --accent-strong: #0369a1;
+  --accent-wash: #e0f2fe;
+  --border-soft: rgba(2, 132, 199, 0.18);
 }
 
 ::selection {
-  background: rgba(125, 211, 252, 0.35);
+  background: rgba(14, 165, 233, 0.25);
 }
 
 a {
@@ -40,7 +43,7 @@ a {
 }
 
 a:focus-visible {
-  outline: 2px solid #7dd3fc;
+  outline: 2px solid #0284c7;
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -52,8 +55,8 @@ a:focus-visible {
   z-index: 50;
   padding: 10px 16px;
   border-radius: 8px;
-  background: #7dd3fc;
-  color: #0f172a;
+  background: #0284c7;
+  color: #ffffff;
   font-weight: 600;
   text-decoration: none;
   transition: top 0.2s ease;

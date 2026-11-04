@@ -46,7 +46,7 @@ const profileStore = useProfileStore();
   grid-template-columns: 72px 1fr;
   gap: 24px;
   padding: 32px 0;
-  border-top: 1px solid rgba(148, 163, 184, 0.15);
+  border-top: 1px solid rgba(2, 132, 199, 0.18);
 }
 
 .num {

@@ -35,7 +35,7 @@ const profileStore = useProfileStore();
   display: grid;
   grid-template-columns: 160px 1fr;
   gap: 48px;
-  border-left: 1px solid rgba(148, 163, 184, 0.2);
+  border-left: 1px solid rgba(2, 132, 199, 0.25);
   padding-left: clamp(24px, 4vw, 64px);
 }
 

@@ -56,13 +56,13 @@ const profileStore = useProfileStore();
   font-weight: 600;
   font-size: var(--step-small);
   padding: 12px 22px;
-  border: 1px solid rgba(125, 211, 252, 0.4);
+  border: 1px solid rgba(2, 132, 199, 0.45);
   border-radius: 999px;
   transition: background 0.2s ease;
 }
 
 .action:hover {
-  background: rgba(125, 211, 252, 0.12);
+  background: rgba(14, 165, 233, 0.1);
 }
 
 h1 {

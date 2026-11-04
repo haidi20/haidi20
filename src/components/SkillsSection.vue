@@ -36,7 +36,7 @@ const profileStore = useProfileStore();
 
 .caps li {
   padding: 20px 0;
-  border-top: 1px solid rgba(148, 163, 184, 0.15);
+  border-top: 1px solid rgba(2, 132, 199, 0.18);
   transition: padding-left 0.2s ease;
 }
 
