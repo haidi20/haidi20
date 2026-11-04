@@ -2,21 +2,25 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "portfolio web pribadi personal branding",
-  "main": "index.js",
+  "type": "module",
+  "main": "index.html",
   "repository": "https://github.com/haidi20/haidi20.git",
   "author": "nhaidii@yahoo.com",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@vitejs/plugin-vue2": "^2.3.3",
-    "@vue/compiler-sfc": "^3.5.13",
-    "bootstrap": "5",
-    "vite": "^6.3.3",
-    "vue": "2",
-    "vue-router": "3"
+    "pinia": "^2.2.6",
+    "vue": "^3.5.13",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.10",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.14"
   }
 }
