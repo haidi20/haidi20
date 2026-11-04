@@ -1,14 +1,19 @@
 <template>
-  <section class="hero">
-    <p class="greeting">Halo, saya</p>
-    <h1>{{ profileStore.profile.name }}</h1>
-    <p class="role">{{ profileStore.profile.role }} — Laravel & Vue</p>
-    <p class="location">{{ profileStore.profile.location }}</p>
-    <nav class="links">
-      <a :href="profileStore.profile.linkedinUrl" target="_blank" rel="noopener">LinkedIn</a>
-      <a :href="profileStore.profile.githubUrl" target="_blank" rel="noopener">GitHub</a>
-      <a :href="`mailto:${profileStore.profile.email}`">Email</a>
-    </nav>
+  <section id="top" class="hero">
+    <div class="corners">
+      <span class="wordmark">hn.</span>
+      <a class="action" :href="`mailto:${profileStore.profile.email}`">Email saya</a>
+    </div>
+    <h1>
+      <span class="line pale">Haidi</span>
+      <span class="line accent">Nurhadinata</span>
+    </h1>
+    <div class="baseline">
+      <p class="support">
+        Full stack developer — Laravel & Vue. Membangun ERP dan sistem bisnis
+        dari database sampai antarmuka.
+      </p>
+    </div>
   </section>
 </template>
 
@@ -20,69 +25,91 @@ const profileStore = useProfileStore();
 
 <style scoped>
 .hero {
-  min-height: 88vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  position: relative;
+  padding-top: 15%;
 }
 
-.greeting {
-  color: #7dd3fc;
-  font-family: ui-monospace, monospace;
-  margin-bottom: 12px;
+.corners {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px clamp(20px, 4vw, 48px);
 }
 
-@keyframes rise {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
+.wordmark {
+  font-weight: 800;
+  font-size: var(--step-body);
+  letter-spacing: -0.02em;
+  color: var(--ink-pale);
+}
+
+.action {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--step-small);
+  padding: 12px 22px;
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.action:hover {
+  background: rgba(125, 211, 252, 0.12);
 }
 
 h1 {
-  font-size: clamp(2.6rem, 7vw, 4.2rem);
-  line-height: 1.05;
-  color: #f8fafc;
-  letter-spacing: -0.02em;
-  animation: rise 0.6s ease both;
-}
-
-.role {
-  font-size: clamp(1.15rem, 3vw, 1.5rem);
-  color: #94a3b8;
-  margin-top: 14px;
-  animation: rise 0.6s 0.12s ease both;
-}
-
-.location {
-  color: #64748b;
-  margin-top: 8px;
-  animation: rise 0.6s 0.2s ease both;
-}
-
-.links {
   display: flex;
-  gap: 12px;
-  margin-top: 32px;
-  flex-wrap: wrap;
-  animation: rise 0.6s 0.3s ease both;
+  flex-direction: column;
+  font-size: clamp(64px, 13vw, 190px);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.88;
+  text-transform: lowercase;
+  margin: 0;
 }
 
-.links a {
-  color: #7dd3fc;
-  text-decoration: none;
-  font-size: 0.92rem;
-  padding: 10px 20px;
-  border: 1px solid rgba(125, 211, 252, 0.3);
-  border-radius: 10px;
-  transition: background 0.2s ease, transform 0.15s ease;
+.line.pale {
+  color: var(--ink-pale);
 }
 
-.links a:hover {
-  background: rgba(125, 211, 252, 0.1);
-  transform: translateY(-2px);
+.line.accent {
+  color: var(--accent);
+}
+
+.baseline {
+  margin-top: auto;
+  padding-bottom: 10vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.support {
+  max-width: 300px;
+  font-size: var(--step-body);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 22%;
+  }
+  .support {
+    max-width: 85%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  h1, .role, .location, .links { animation: none; }
-  .links a { transition: none; }
+  .action {
+    transition: none;
+  }
 }
 </style>

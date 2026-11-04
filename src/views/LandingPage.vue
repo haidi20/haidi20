@@ -1,5 +1,5 @@
 <template>
-  <main class="page">
+  <main id="konten" class="page">
     <HeroSection />
     <AboutSection />
     <SkillsSection />
@@ -20,8 +20,12 @@ import ContactSection from '../components/ContactSection.vue';
 
 <style scoped>
 .page {
-  max-width: 880px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 clamp(20px, 4vw, 48px);
+}
+
+section {
+  scroll-margin-top: 88px;
 }
 </style>

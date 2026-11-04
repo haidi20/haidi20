@@ -14,9 +14,10 @@ defineProps<{ index: string; title: string }>();
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: #f1f5f9;
   margin-bottom: 28px;
+  text-wrap: balance;
 }
 
 .index {

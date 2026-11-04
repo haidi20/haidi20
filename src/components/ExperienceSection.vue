@@ -1,14 +1,17 @@
 <template>
-  <section class="experience">
-    <SectionTitle index="03" title="Pengalaman Kerja" />
-    <ol class="timeline">
-      <li v-for="exp in profileStore.experiences" :key="exp.company + exp.period" class="item">
-        <p class="period">{{ exp.period }}</p>
-        <h3>{{ exp.role }} · <span class="company">{{ exp.company }}</span></h3>
-        <p class="location">{{ exp.location }}</p>
-        <ul>
-          <li v-for="line in exp.description" :key="line">{{ line }}</li>
-        </ul>
+  <section id="pengalaman" class="experience">
+    <p class="label">Pengalaman</p>
+    <ol class="spines">
+      <li v-for="(exp, i) in profileStore.experiences" :key="exp.company" class="spine">
+        <span class="num">{{ String(i + 1).padStart(2, '0') }}</span>
+        <div class="body">
+          <h3>{{ exp.role }}</h3>
+          <p class="meta">{{ exp.company }} — {{ exp.location }}</p>
+          <p class="period">{{ exp.period }}</p>
+          <ul>
+            <li v-for="line in exp.description" :key="line">{{ line }}</li>
+          </ul>
+        </div>
       </li>
     </ol>
   </section>
@@ -16,83 +19,86 @@
 
 <script setup lang="ts">
 import { useProfileStore } from '../stores/profile';
-import SectionTitle from './SectionTitle.vue';
 
 const profileStore = useProfileStore();
 </script>
 
 <style scoped>
 .experience {
-  padding: 72px 0;
+  padding: 96px 0;
 }
 
-.timeline {
+.label {
+  color: var(--ink-soft);
+  font-size: var(--step-small);
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.spines {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
+  margin: 0;
+  padding: 0;
 }
 
-.item {
-  position: relative;
-  padding-left: 28px;
-  border-left: 1px solid rgba(148, 163, 184, 0.2);
+.spine {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 24px;
+  padding: 32px 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
 }
 
-.item::before {
-  content: '';
-  position: absolute;
-  left: -6px;
-  top: 6px;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: #0f172a;
-  border: 2px solid #7dd3fc;
+.num {
+  font-family: ui-monospace, monospace;
+  color: var(--accent);
+  font-size: var(--step-small);
+  padding-top: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.spine h3 {
+  font-size: var(--step-head);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink-pale);
+  margin: 0 0 10px;
+}
+
+.meta {
+  color: var(--ink-soft);
+  font-size: var(--step-body);
+  margin: 0 0 4px;
 }
 
 .period {
-  color: #7dd3fc;
-  font-family: ui-monospace, monospace;
-  font-size: 0.82rem;
-  margin-bottom: 8px;
+  color: var(--ink-soft);
+  font-size: var(--step-small);
+  font-variant-numeric: tabular-nums;
+  margin: 0 0 16px;
 }
 
-.item h3 {
-  color: #f1f5f9;
-  font-size: 1.05rem;
-}
-
-.company {
-  color: #94a3b8;
-  font-weight: 400;
-}
-
-.location {
-  color: #64748b;
-  font-size: 0.85rem;
-  margin: 4px 0 12px;
-}
-
-.item ul {
+.spine ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  max-width: 640px;
 }
 
-.item li {
-  color: #94a3b8;
-  font-size: 0.92rem;
-  line-height: 1.7;
-  padding-left: 18px;
-  position: relative;
+.spine li {
+  color: var(--ink-soft);
+  font-size: var(--step-small);
+  line-height: 1.6;
 }
 
-.item li::before {
-  content: '▹';
-  position: absolute;
-  left: 0;
-  color: #7dd3fc;
+@media (max-width: 640px) {
+  .spine {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
 }
 </style>
