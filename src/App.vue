@@ -9,7 +9,9 @@
 
 <style>
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
 }
 </style>

@@ -1,59 +1,27 @@
 <template>
-  <div
-    class="landing d-flex flex-column align-items-center justify-content-center vh-100 text-center"
-    style="margin: 0 auto; max-width: 800px;"
-  >
-    <img
-      :src="profileStore.profile.logoUrl"
-      :alt="profileStore.profile.logoAlt"
-      style="width: 200px; height: 200px; border-radius: 50%; object-fit: contain; margin-top: 20px; border: 5px solid skyblue;"
-      :class="{ animatedBorder: profileStore.isAnimating }"
-      @mouseover="profileStore.startAnimation()"
-      @mouseleave="profileStore.stopAnimation()"
-    />
-
-    <footer class="mt-auto" style="padding-bottom: 20px;">
-      <p class="text-secondary mb-0 text-center">© {{ profileStore.profile.year }} {{ profileStore.profile.name }}</p>
-    </footer>
-  </div>
+  <main class="page">
+    <HeroSection />
+    <AboutSection />
+    <SkillsSection />
+    <ExperienceSection />
+    <EducationSection />
+    <ContactSection />
+  </main>
 </template>
 
 <script setup lang="ts">
-import { useProfileStore } from '../stores/profile';
-
-const profileStore = useProfileStore();
+import HeroSection from '../components/HeroSection.vue';
+import AboutSection from '../components/AboutSection.vue';
+import SkillsSection from '../components/SkillsSection.vue';
+import ExperienceSection from '../components/ExperienceSection.vue';
+import EducationSection from '../components/EducationSection.vue';
+import ContactSection from '../components/ContactSection.vue';
 </script>
 
 <style scoped>
-.animatedBorder {
-  animation: borderPulse 1.5s infinite;
-}
-
-@keyframes borderPulse {
-  0% {
-    border-color: skyblue;
-  }
-  50% {
-    border-color: lightgreen;
-  }
-  100% {
-    border-color: skyblue;
-  }
-}
-
-.landing {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
+.page {
+  max-width: 880px;
   margin: 0 auto;
-  max-width: 800px;
-}
-
-footer {
-  margin-top: auto;
-  padding-bottom: 20px;
+  padding: 0 24px;
 }
 </style>
