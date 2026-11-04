@@ -5,6 +5,7 @@
     <StatsSection />
     <SkillsSection />
     <ExperienceSection />
+    <MediumSection />
     <EducationSection />
     <ContactSection />
   </main>
@@ -17,6 +18,7 @@ import AboutSection from '../components/AboutSection.vue';
 import StatsSection from '../components/StatsSection.vue';
 import SkillsSection from '../components/SkillsSection.vue';
 import ExperienceSection from '../components/ExperienceSection.vue';
+import MediumSection from '../components/MediumSection.vue';
 import EducationSection from '../components/EducationSection.vue';
 import ContactSection from '../components/ContactSection.vue';
 

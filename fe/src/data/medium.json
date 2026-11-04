@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Flutter Setup \u2014 Components You Must Have For Your Project",
+    "link": "https://towardsdev.com/flutter-setup-components-you-must-have-for-your-project-8d336f7ecd5b",
+    "pubDate": "2023-07-22 14:11:06",
+    "thumbnail": null
+  },
+  {
+    "title": "Tips Laravel Expert \u2014 How To Import Files Large More Than 5GB Into the Database Using the \u201cQueue\u201d",
+    "link": "https://towardsdev.com/laravel-expert-how-queue-import-file-large-more-than-5gb-into-the-database-460864ce23d2",
+    "pubDate": "2022-07-07 05:10:47",
+    "thumbnail": "/medium/01-tips-laravel-expert-how-to-import-files-large-more.jpeg"
+  },
+  {
+    "title": "Mastering ReactJs: Build Landing Page urCrypto with Nextjs + Tailwind + TypeScript",
+    "link": "https://towardsdev.com/mastering-reactjs-build-landing-page-urcrypto-with-nextjs-tailwind-typescript-d24355241121",
+    "pubDate": "2022-04-25 03:47:35",
+    "thumbnail": "/medium/02-mastering-reactjs-build-landing-page-urcrypto-with.png"
+  },
+  {
+    "title": "Become DevOps AWS\u2014 Part 1: Register Account",
+    "link": "https://towardsdev.com/become-devops-aws-part-1-create-own-virtual-server-on-cloud-72fe773916a6",
+    "pubDate": "2022-04-11 06:25:07",
+    "thumbnail": "/medium/03-become-devops-aws-part-1-register-account.png"
+  },
+  {
+    "title": "Mastering Django Development \u2014 Bonus Lesson: Powerful Django Rest API with Nginx, Docker\u2026",
+    "link": "https://towardsdev.com/mastering-django-development-bonus-lesson-powerful-django-rest-api-with-nginx-docker-8e51ced9ef88",
+    "pubDate": "2022-03-26 04:53:17",
+    "thumbnail": "/medium/04-mastering-django-development-bonus-lesson-powerful.jpeg"
+  },
+  {
+    "title": "Mastering Django Development \u2014 Part 3: Powerful Django Rest API with Nginx, Docker, &PostgreSQL",
+    "link": "https://towardsdev.com/mastering-django-development-part-3-powerful-django-rest-api-with-nginx-docker-postgresql-6199e60b16dc",
+    "pubDate": "2022-03-18 11:46:21",
+    "thumbnail": "/medium/05-mastering-django-development-part-3-powerful-djang.jpeg"
+  },
+  {
+    "title": "Mastering Django Development \u2014 Part 2: Powerful Django Rest API with Nginx & Docker",
+    "link": "https://towardsdev.com/mastering-django-development-part-2-powerful-django-rest-api-with-nginx-docker-ffd8efcd8ed",
+    "pubDate": "2022-03-15 06:27:59",
+    "thumbnail": "/medium/06-mastering-django-development-part-2-powerful-djang.jpeg"
+  },
+  {
+    "title": "Mastering Django Development \u2014 Part 1: Powerful Django Rest API with Docker",
+    "link": "https://towardsdev.com/mastering-django-development-powerful-django-rest-api-with-docker-e517fe300bb9",
+    "pubDate": "2022-03-12 08:49:13",
+    "thumbnail": "/medium/07-mastering-django-development-part-1-powerful-djang.png"
+  },
+  {
+    "title": "Mastering Data Scraping using Python \u2014 Portal Job",
+    "link": "https://towardsdev.com/mastering-data-scraping-using-python-portal-job-9e298f77fd94",
+    "pubDate": "2022-03-11 08:38:37",
+    "thumbnail": "/medium/08-mastering-data-scraping-using-python-portal-job.jpeg"
+  },
+  {
+    "title": "Dive Into The Laravel 9 Framework \u2014 Part 1: Introduction",
+    "link": "https://towardsdev.com/dive-into-the-laravel-9-framework-part-1-introduction-c7068a00b9ee",
+    "pubDate": "2022-03-04 15:24:36",
+    "thumbnail": "/medium/09-dive-into-the-laravel-9-framework-part-1-introduct.png"
+  }
+]

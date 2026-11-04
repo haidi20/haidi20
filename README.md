@@ -22,10 +22,7 @@ Mobile | Flutter
 ![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=haidi20&theme=default&show_icons=true)
 
 ## My medium
-<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@haidinurhadinata_22/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@haidinurhadinata_22/0" alt="Recent Article 1"> 
-  <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@haidinurhadinata_22/1"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@haidinurhadinata_22/1" alt="Recent Article 2"> 
-    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@haidinurhadinata_22/2"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@haidinurhadinata_22/2" alt="Recent Article 3"> 
-<a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@haidinurhadinata_22/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@haidinurhadinata_22/3" alt="Recent Article 4"> 
- <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@haidinurhadinata_22/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@haidinurhadinata_22/4" alt="Recent Article 5">
+
+Daftar lengkap artikel + thumbnail: [MEDIUM.md](MEDIUM.md).
 
 
