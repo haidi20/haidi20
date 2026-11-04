@@ -1,6 +1,5 @@
 <template>
   <section id="top" class="hero">
-    <div class="grid-bg" aria-hidden="true"></div>
     <header class="bar">
       <span class="wordmark">hn.</span>
       <span class="badge"><span class="dot" aria-hidden="true"></span>Terbuka untuk proyek</span>
@@ -43,17 +42,6 @@ const profileStore = useProfileStore();
   flex-direction: column;
   position: relative;
   padding-top: clamp(72px, 9vh, 128px);
-}
-
-.grid-bg {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(to right, var(--line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
-  background-size: clamp(48px, 8vw, 112px) clamp(48px, 8vw, 112px);
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent 72%);
-  pointer-events: none;
 }
 
 .bar {
