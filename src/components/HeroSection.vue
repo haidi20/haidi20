@@ -32,7 +32,7 @@ const profileStore = useProfileStore();
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-top: 15%;
+  padding-top: clamp(88px, 10vh, 160px);
 }
 
 .corners {
