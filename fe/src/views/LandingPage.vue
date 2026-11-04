@@ -24,6 +24,17 @@ import ContactSection from '../components/ContactSection.vue';
 
 onMounted(() => {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const hash = link.getAttribute('href');
+      if (!hash || hash === '#') return;
+      const target = document.querySelector<HTMLElement>(hash);
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+      history.replaceState(null, '', ' ');
+    });
+  });
   const targets = document.querySelectorAll<HTMLElement>('[data-reveal]');
   if (reduced || !('IntersectionObserver' in window)) {
     targets.forEach((el) => el.classList.add('revealed'));
