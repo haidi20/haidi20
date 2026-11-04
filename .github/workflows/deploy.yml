@@ -1,0 +1,29 @@
+﻿name: Deploy Portfolio
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: haidi20-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.HADI20_VPS_HOST }}
+          username: ${{ secrets.HADI20_VPS_USER }}
+          key: ${{ secrets.HADI20_VPS_SSH_KEY }}
+          script: |
+            set -Eeuo pipefail
+            cd /var/www/hello-repo
+            git fetch origin main
+            git reset --hard origin/main
+            rsync -a --delete /var/www/hello-repo/dist/ /var/www/hello/
+            systemctl restart haidi20-be
+            curl -fsS http://127.0.0.1/api/health
