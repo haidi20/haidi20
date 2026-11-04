@@ -1,7 +1,7 @@
 <template>
   <section id="top" class="hero">
     <header class="bar">
-      <span class="wordmark">hn.</span>
+      <span class="wordmark">hn</span>
       <span class="badge"><span class="dot" aria-hidden="true"></span>Terbuka untuk proyek</span>
       <a class="action" :href="`mailto:${profileStore.profile.email}`">Email saya</a>
     </header>
