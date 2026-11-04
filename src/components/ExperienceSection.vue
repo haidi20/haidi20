@@ -1,17 +1,17 @@
 <template>
   <section id="pengalaman" class="experience" data-reveal>
-    <p class="label">Pengalaman</p>
-    <ol class="spines">
-      <li v-for="(exp, i) in profileStore.experiences" :key="exp.company" class="spine">
-        <span class="num">{{ String(i + 1).padStart(2, '0') }}</span>
+    <p class="label"><span class="num" aria-hidden="true">03</span>Pengalaman</p>
+    <ol class="list">
+      <li v-for="(exp, i) in profileStore.experiences" :key="exp.company" class="row">
+        <span class="index" aria-hidden="true">{{ String(i + 1).padStart(2, '0') }}</span>
         <div class="body">
           <h3>{{ exp.role }}</h3>
           <p class="meta">{{ exp.company }} — {{ exp.location }}</p>
-          <p class="period">{{ exp.period }}</p>
           <ul>
             <li v-for="line in exp.description" :key="line">{{ line }}</li>
           </ul>
         </div>
+        <p class="period">{{ exp.period }}</p>
       </li>
     </ol>
   </section>
@@ -25,61 +25,69 @@ const profileStore = useProfileStore();
 
 <style scoped>
 .experience {
-  padding: 96px 0;
+  padding: clamp(88px, 12vh, 140px) 0;
 }
 
 .label {
-  color: var(--ink-soft);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: var(--mono);
   font-size: var(--step-small);
-  font-weight: 600;
-  margin-bottom: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin: 0 0 40px;
 }
 
-.spines {
+.num {
+  color: var(--accent);
+}
+
+.list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.spine {
+.row {
   display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 24px;
-  padding: 32px 0;
-  border-top: 1px solid rgba(2, 132, 199, 0.18);
+  grid-template-columns: 56px 1fr auto;
+  gap: clamp(16px, 3vw, 40px);
+  padding: clamp(28px, 4vw, 44px) 0;
+  border-top: 1px solid var(--line);
+  transition: background 0.25s ease;
 }
 
-.num {
-  font-family: ui-monospace, monospace;
-  color: var(--accent);
+.row:hover {
+  background: linear-gradient(to right, var(--accent-wash), transparent 65%);
+}
+
+.index {
+  font-family: var(--mono);
   font-size: var(--step-small);
-  padding-top: 6px;
+  color: var(--accent);
+  padding-top: 8px;
   font-variant-numeric: tabular-nums;
 }
 
-.spine h3 {
+.body h3 {
   font-size: var(--step-head);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1;
-  color: var(--ink-pale);
+  color: var(--ink);
   margin: 0 0 10px;
 }
 
 .meta {
   color: var(--ink-soft);
   font-size: var(--step-body);
-  margin: 0 0 4px;
-}
-
-.period {
-  color: var(--ink-soft);
-  font-size: var(--step-small);
-  font-variant-numeric: tabular-nums;
   margin: 0 0 16px;
 }
 
-.spine ul {
+.body ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -89,16 +97,35 @@ const profileStore = useProfileStore();
   max-width: 640px;
 }
 
-.spine li {
+.body li {
   color: var(--ink-soft);
   font-size: var(--step-small);
   line-height: 1.6;
 }
 
-@media (max-width: 640px) {
-  .spine {
+.period {
+  font-family: var(--mono);
+  font-size: var(--step-small);
+  color: var(--ink-soft);
+  white-space: nowrap;
+  padding-top: 8px;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 720px) {
+  .row {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+  .period {
+    padding-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .row {
+    transition: none;
   }
 }
 </style>

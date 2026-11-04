@@ -1,18 +1,24 @@
 <template>
   <section id="kontak" class="contact" data-reveal>
-    <p class="label">Kontak</p>
-    <a class="row" :href="`mailto:${profileStore.profile.email}`">
-      <span class="key">Email</span>
-      <span class="val">{{ profileStore.profile.email }}</span>
+    <p class="label"><span class="num" aria-hidden="true">05</span>Kontak</p>
+    <a class="cta" :href="`mailto:${profileStore.profile.email}`">
+      <span class="cta-line">Mari bekerja sama —</span>
+      <span class="cta-line accent">kirim email</span>
     </a>
-    <a class="row" :href="profileStore.profile.linkedinUrl" target="_blank" rel="noopener">
-      <span class="key">LinkedIn</span>
-      <span class="val">haidi-nurhadinata</span>
-    </a>
-    <a class="row" :href="profileStore.profile.githubUrl" target="_blank" rel="noopener">
-      <span class="key">GitHub</span>
-      <span class="val">haidi20</span>
-    </a>
+    <ul class="links">
+      <li>
+        <a :href="profileStore.profile.linkedinUrl" target="_blank" rel="noopener">
+          <span class="key">LinkedIn</span>
+          <span class="val">haidi-nurhadinata</span>
+        </a>
+      </li>
+      <li>
+        <a :href="profileStore.profile.githubUrl" target="_blank" rel="noopener">
+          <span class="key">GitHub</span>
+          <span class="val">haidi20</span>
+        </a>
+      </li>
+    </ul>
     <footer class="footer">© {{ year }} {{ profileStore.profile.name }}</footer>
   </section>
 </template>
@@ -26,67 +32,108 @@ const year = new Date().getFullYear();
 
 <style scoped>
 .contact {
-  padding: 96px 0 48px;
+  padding: clamp(88px, 12vh, 140px) 0 48px;
 }
 
 .label {
-  color: var(--ink-soft);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: var(--mono);
   font-size: var(--step-small);
-  font-weight: 600;
-  margin-bottom: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin: 0 0 40px;
 }
 
-.row {
+.num {
+  color: var(--accent);
+}
+
+.cta {
+  display: block;
+  text-decoration: none;
+  margin-bottom: clamp(48px, 8vh, 88px);
+}
+
+.cta-line {
+  display: block;
+  font-size: clamp(2.25rem, 1.4rem + 5vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+
+.cta-line.accent {
+  color: var(--accent);
+}
+
+.cta:hover .cta-line {
+  color: var(--accent-strong);
+}
+
+.cta:hover .cta-line.accent {
+  color: var(--ink);
+}
+
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links a {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 24px;
-  padding: 22px 0;
-  border-top: 1px solid rgba(2, 132, 199, 0.18);
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
   text-decoration: none;
-  transition:
-    padding-left 0.25s ease,
-    background 0.25s ease;
+  transition: padding-left 0.25s ease, background 0.25s ease;
 }
 
-.row:hover {
+.links a:hover {
   padding-left: 12px;
-  background: var(--accent-wash, #e0f2fe);
-}
-
-.row:hover .val {
-  color: var(--accent);
+  background: var(--accent-wash);
 }
 
 .key {
-  color: var(--ink-soft);
+  font-family: var(--mono);
   font-size: var(--step-small);
+  color: var(--ink-soft);
 }
 
 .val {
-  color: var(--ink-pale);
+  color: var(--ink);
   font-size: var(--step-lead);
   font-weight: 600;
   letter-spacing: -0.01em;
-  transition: color 0.2s ease;
   overflow-wrap: anywhere;
 }
 
 .footer {
   margin-top: 72px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-strong);
   color: #94a3b8;
+  font-family: var(--mono);
   font-size: var(--step-small);
 }
 
 @media (max-width: 560px) {
-  .row {
+  .links a {
     flex-direction: column;
     gap: 4px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .row, .val {
+  .cta-line, .links a {
     transition: none;
   }
 }

@@ -16,27 +16,30 @@
 
 <style scoped>
 .stats {
-  padding: 96px 0;
+  padding: clamp(48px, 8vh, 88px) 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(32px, 6vw, 96px);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .stat {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding: clamp(24px, 4vw, 48px);
+}
+
+.stat + .stat {
+  border-left: 1px solid var(--line);
 }
 
 .num {
-  font-size: clamp(4.5rem, 12vw, 9rem);
+  font-size: clamp(4rem, 10vw, 8rem);
   font-weight: 800;
   letter-spacing: -0.05em;
   line-height: 0.85;
-  background: linear-gradient(135deg, #1e293b 20%, #0ea5e9 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--ink);
   font-variant-numeric: tabular-nums;
 }
 
@@ -51,7 +54,10 @@
 @media (max-width: 640px) {
   .stats {
     grid-template-columns: 1fr;
-    padding: 72px 0;
+  }
+  .stat + .stat {
+    border-left: none;
+    border-top: 1px solid var(--line);
   }
 }
 </style>

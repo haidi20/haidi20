@@ -24,7 +24,7 @@ html {
 body {
   font-family: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   background-color: #ffffff;
-  color: #1e293b;
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -34,12 +34,14 @@ body {
   --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
   --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
   --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
-  --ink-pale: #1e293b;
+  --ink: #0f172a;
   --ink-soft: #64748b;
   --accent: #0ea5e9;
   --accent-strong: #0369a1;
   --accent-wash: #e0f2fe;
-  --border-soft: rgba(2, 132, 199, 0.18);
+  --line: rgba(2, 132, 199, 0.16);
+  --line-strong: rgba(2, 132, 199, 0.32);
+  --mono: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Segoe UI Mono', Menlo, monospace;
 }
 
 ::selection {
@@ -51,7 +53,7 @@ a {
 }
 
 a:focus-visible {
-  outline: 2px solid #0284c7;
+  outline: 2px solid var(--accent-strong);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -63,7 +65,7 @@ a:focus-visible {
   z-index: 50;
   padding: 10px 16px;
   border-radius: 8px;
-  background: #0284c7;
+  background: var(--accent-strong);
   color: #ffffff;
   font-weight: 600;
   text-decoration: none;

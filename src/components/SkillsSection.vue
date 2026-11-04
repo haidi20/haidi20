@@ -1,10 +1,13 @@
 <template>
   <section id="keahlian" class="skills" data-reveal>
-    <p class="label">Keahlian</p>
-    <ul class="caps">
-      <li v-for="group in profileStore.skills" :key="group.category">
-        <span class="cap-name">{{ group.category }}</span>
-        <span class="cap-items">{{ group.items.join(' · ') }}</span>
+    <p class="label"><span class="num" aria-hidden="true">02</span>Keahlian</p>
+    <ul class="grid">
+      <li v-for="(group, i) in profileStore.skills" :key="group.category" class="cell">
+        <span class="index" aria-hidden="true">{{ String(i + 1).padStart(2, '0') }}</span>
+        <h3>{{ group.category }}</h3>
+        <ul class="items">
+          <li v-for="item in group.items" :key="item">{{ item }}</li>
+        </ul>
       </li>
     </ul>
   </section>
@@ -18,50 +21,90 @@ const profileStore = useProfileStore();
 
 <style scoped>
 .skills {
-  padding: 96px 0;
+  padding: clamp(88px, 12vh, 140px) 0;
 }
 
 .label {
-  color: var(--ink-soft);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: var(--mono);
   font-size: var(--step-small);
-  font-weight: 600;
-  margin-bottom: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin: 0 0 40px;
 }
 
-.caps {
+.num {
+  color: var(--accent);
+}
+
+.grid {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
 }
 
-.caps li {
-  padding: 20px 0;
-  border-top: 1px solid rgba(2, 132, 199, 0.18);
-  transition:
-    padding-left 0.25s ease,
-    background 0.25s ease;
+.cell {
+  padding: clamp(24px, 3.5vw, 44px);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background 0.25s ease;
 }
 
-.caps li:hover {
-  padding-left: 12px;
-  background: var(--accent-wash, #e0f2fe);
+.cell:hover {
+  background: var(--accent-wash);
 }
 
-.cap-name {
-  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+.index {
+  font-family: var(--mono);
+  font-size: var(--step-small);
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.cell h3 {
+  margin: 12px 0 16px;
+  font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.25rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1;
-  color: var(--ink-pale);
+  color: var(--ink);
 }
 
-.cap-items {
+.items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.items li {
+  font-family: var(--mono);
+  font-size: 0.75rem;
   color: var(--ink-soft);
-  font-size: var(--step-small);
+  padding: 6px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .caps li {
+  .cell {
     transition: none;
   }
 }
