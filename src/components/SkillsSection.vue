@@ -37,11 +37,14 @@ const profileStore = useProfileStore();
 .caps li {
   padding: 20px 0;
   border-top: 1px solid rgba(2, 132, 199, 0.18);
-  transition: padding-left 0.2s ease;
+  transition:
+    padding-left 0.25s ease,
+    background 0.25s ease;
 }
 
 .caps li:hover {
   padding-left: 12px;
+  background: var(--accent-wash, #e0f2fe);
 }
 
 .cap-name {

@@ -44,11 +44,14 @@ const year = new Date().getFullYear();
   padding: 22px 0;
   border-top: 1px solid rgba(2, 132, 199, 0.18);
   text-decoration: none;
-  transition: padding-left 0.2s ease;
+  transition:
+    padding-left 0.25s ease,
+    background 0.25s ease;
 }
 
 .row:hover {
   padding-left: 12px;
+  background: var(--accent-wash, #e0f2fe);
 }
 
 .row:hover .val {

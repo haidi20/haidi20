@@ -9,10 +9,13 @@
       <span class="line accent">Nurhadinata</span>
     </h1>
     <div class="baseline">
-      <p class="support">
-        Full stack developer — Laravel & Vue. Membangun ERP dan sistem bisnis
-        dari database sampai antarmuka.
-      </p>
+      <div class="baseline-inner">
+        <p class="support">
+          Full stack developer — Laravel & Vue. Membangun ERP dan sistem bisnis
+          dari database sampai antarmuka.
+        </p>
+        <a class="secondary" href="#pengalaman">Lihat pengalaman ↓</a>
+      </div>
     </div>
   </section>
 </template>
@@ -91,11 +94,32 @@ h1 {
   justify-content: flex-end;
 }
 
+.baseline-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
 .support {
   max-width: 300px;
   font-size: var(--step-body);
   line-height: 1.5;
   color: var(--ink-soft);
+}
+
+.secondary {
+  color: var(--accent-strong, #0369a1);
+  font-weight: 600;
+  font-size: var(--step-small);
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.secondary:hover {
+  border-color: var(--accent-strong, #0369a1);
 }
 
 @media (max-width: 640px) {

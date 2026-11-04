@@ -33,7 +33,10 @@
   font-weight: 800;
   letter-spacing: -0.05em;
   line-height: 0.85;
-  color: var(--ink-pale);
+  background: linear-gradient(135deg, #1e293b 20%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-variant-numeric: tabular-nums;
 }
 
