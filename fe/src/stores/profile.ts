@@ -42,10 +42,11 @@ export const useProfileStore = defineStore('profile', {
         'Lulusan Politeknik Negeri Samarinda jurusan Teknologi Informasi. Fokus membangun aplikasi web dan ERP end-to-end: dari desain database, API, hingga antarmuka yang cepat dan rapi. Berpengalaman di industri pertambangan dan kesehatan, dengan kebiasaan mengutamakan arsitektur modular, testing, dan deployment otomatis.',
     } as Profile,
     skills: [
-      { category: 'Front-End', items: ['Vue 3', 'TypeScript', 'React.js', 'Next.js', 'Redux', 'Tailwind CSS'] },
+      { category: 'Front-End', items: ['Vue 3', 'TypeScript', 'Pinia', 'Bootstrap 5'] },
       { category: 'Back-End', items: ['Laravel', 'Express.js', 'REST API', 'MySQL', 'SQL Server'] },
       { category: 'Mobile', items: ['Flutter', 'Java (Android)'] },
       { category: 'DevOps', items: ['Docker', 'Nginx', 'Jenkins', 'GitHub Actions', 'CI/CD'] },
+      { category: 'Testing', items: ['Pest PHP', 'Vitest', 'Postman/Newman'] },
     ] as SkillGroup[],
     experiences: [
       {
