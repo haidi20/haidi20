@@ -9,6 +9,10 @@ const router = createRouter({
       name: 'LandingPage',
       component: LandingPage,
     },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/',
+    },
   ],
 });
 
