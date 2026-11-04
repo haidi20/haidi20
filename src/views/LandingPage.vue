@@ -2,6 +2,7 @@
   <main id="konten" class="page">
     <HeroSection />
     <AboutSection />
+    <StatsSection />
     <SkillsSection />
     <ExperienceSection />
     <EducationSection />
@@ -12,6 +13,7 @@
 <script setup lang="ts">
 import HeroSection from '../components/HeroSection.vue';
 import AboutSection from '../components/AboutSection.vue';
+import StatsSection from '../components/StatsSection.vue';
 import SkillsSection from '../components/SkillsSection.vue';
 import ExperienceSection from '../components/ExperienceSection.vue';
 import EducationSection from '../components/EducationSection.vue';
