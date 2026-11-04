@@ -1,5 +1,5 @@
 <template>
-  <section id="tentang" class="about">
+  <section id="tentang" class="about" data-reveal>
     <div class="row">
       <dl class="facts">
         <div class="fact">

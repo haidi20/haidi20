@@ -1,5 +1,5 @@
 <template>
-  <section id="pengalaman" class="experience">
+  <section id="pengalaman" class="experience" data-reveal>
     <p class="label">Pengalaman</p>
     <ol class="spines">
       <li v-for="(exp, i) in profileStore.experiences" :key="exp.company" class="spine">

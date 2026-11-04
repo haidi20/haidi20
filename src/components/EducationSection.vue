@@ -1,5 +1,5 @@
 <template>
-  <section id="pendidikan" class="education">
+  <section id="pendidikan" class="education" data-reveal>
     <p class="label">Pendidikan</p>
     <p class="school">{{ profileStore.education.school }}</p>
     <p class="meta">{{ profileStore.education.degree }}</p>

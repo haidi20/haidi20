@@ -25,7 +25,7 @@ const profileStore = useProfileStore();
 
 <style scoped>
 .hero {
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -86,7 +86,7 @@ h1 {
 
 .baseline {
   margin-top: auto;
-  padding-bottom: 10vh;
+  padding-bottom: 6vh;
   display: flex;
   justify-content: flex-end;
 }

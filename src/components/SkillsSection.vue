@@ -1,5 +1,5 @@
 <template>
-  <section id="keahlian" class="skills">
+  <section id="keahlian" class="skills" data-reveal>
     <p class="label">Keahlian</p>
     <ul class="caps">
       <li v-for="group in profileStore.skills" :key="group.category">

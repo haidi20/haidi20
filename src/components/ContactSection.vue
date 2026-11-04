@@ -1,5 +1,5 @@
 <template>
-  <section id="kontak" class="contact">
+  <section id="kontak" class="contact" data-reveal>
     <p class="label">Kontak</p>
     <a class="row" :href="`mailto:${profileStore.profile.email}`">
       <span class="key">Email</span>

@@ -1,5 +1,5 @@
 <template>
-  <section class="stats" aria-label="Ringkasan pengalaman">
+  <section class="stats" aria-label="Ringkasan pengalaman" data-reveal>
     <div class="stat">
       <span class="num">5+</span>
       <p>tahun membangun aplikasi web &amp; mobile, dari tambang sampai klinik</p>

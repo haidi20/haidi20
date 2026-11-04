@@ -12,6 +12,7 @@
 html {
   color-scheme: light;
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
   background-color: #ffffff;
   color: #1e293b;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 :root {
