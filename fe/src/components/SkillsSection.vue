@@ -2,8 +2,7 @@
   <section id="keahlian" class="skills" data-reveal>
     <p class="label"><span class="num" aria-hidden="true">02</span>Keahlian</p>
     <ul class="grid">
-      <li v-for="(group, i) in profileStore.skills" :key="group.category" class="cell">
-        <span class="index" aria-hidden="true">{{ String(i + 1).padStart(2, '0') }}</span>
+      <li v-for="group in profileStore.skills" :key="group.category" class="cell">
         <h3>{{ group.category }}</h3>
         <ul class="items">
           <li v-for="item in group.items" :key="item">{{ item }}</li>
@@ -62,15 +61,8 @@ const profileStore = useProfileStore();
   background: var(--accent-wash);
 }
 
-.index {
-  font-family: var(--mono);
-  font-size: var(--step-small);
-  color: var(--accent);
-  font-variant-numeric: tabular-nums;
-}
-
 .cell h3 {
-  margin: 12px 0 16px;
+  margin: 0 0 16px;
   font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.25rem);
   font-weight: 800;
   letter-spacing: -0.03em;
