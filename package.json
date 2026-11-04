@@ -10,5 +10,8 @@
     "build:fe": "bun --filter './fe' build",
     "dev:be": "bun --filter './be' dev",
     "start:be": "bun --filter './be' start"
+  },
+  "dependencies": {
+    "@hono/swagger-ui": "^0.6.2"
   }
 }
