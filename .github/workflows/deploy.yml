@@ -10,10 +10,50 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to VPS
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        working-directory: fe
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        working-directory: fe
+        run: bun run build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: fe/dist
+          retention-days: 3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Upload dist to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HADI20_VPS_HOST }}
+          username: ${{ secrets.HADI20_VPS_USER }}
+          key: ${{ secrets.HADI20_VPS_SSH_KEY }}
+          source: dist/*
+          target: /var/www/hello
+          strip_components: 1
+          rm: true
+
+      - name: Restart BE and health check
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.HADI20_VPS_HOST }}
@@ -21,9 +61,5 @@ jobs:
           key: ${{ secrets.HADI20_VPS_SSH_KEY }}
           script: |
             set -Eeuo pipefail
-            cd /var/www/hello-repo
-            git fetch origin main
-            git reset --hard origin/main
-            rsync -a --delete /var/www/hello-repo/dist/ /var/www/hello/
             systemctl restart haidi20-be
             curl -fsS http://127.0.0.1/api/health

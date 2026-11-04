@@ -4,3 +4,4 @@ fe/dist/
 be/dist/
 *.log
 *.local
+dist/
