@@ -15,6 +15,12 @@ html {
   scrollbar-gutter: stable;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   background-color: #ffffff;
